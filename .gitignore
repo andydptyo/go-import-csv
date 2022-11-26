@@ -12,4 +12,9 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
+config.yaml
+.DS_Store
+*/.DS_Store
+bin/
+internal/database/mysql/seeders/*

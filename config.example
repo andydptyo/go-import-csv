@@ -1,0 +1,9 @@
+database:
+  dbname: db
+  host: 127.0.0.1
+  port: 3360
+  user: root
+  password: password
+  maxLifeTime: 1
+  maxOpenConnection: 10
+  maxIdleConnection: 10

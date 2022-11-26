@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  mysql:
+    image: "mysql:latest"
+    ports:
+      - "127.0.0.1:3360:3306"
+    expose:
+      - 3360
+    environment:
+      MYSQL_DATABASE: "db"
+      MYSQL_ROOT_PASSWORD: 'password'
+    command: mysqld --sql_mode=""
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - "PMA_ARBITRARY=1"
+      - "PMA_HOST=mysql"
+      - "PMA_USER=root"
+      - "PMA_PASSWORD=password"
+      - "MYSQL_ROOT_PASSWORD=password"
+    ports:
+      - "127.0.0.1:8089:80"
+    expose:
+      - 8089
